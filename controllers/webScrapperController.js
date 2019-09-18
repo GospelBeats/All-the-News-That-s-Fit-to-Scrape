@@ -1,16 +1,14 @@
-/////////////////////////////////////////////// /* Imports */ ////////////////////////////////////////////////////////
+
 let axios = require('axios'); // HTTP Request
 let cheerio = require('cheerio'); // Web Scrapper
 let mongoose = require('mongoose'); // MongoDB ORM
 let db = require("../models"); // Require all models
 
-/////////////////////////////////////////////// /* Mongoose Configuration */ ////////////////////////////////////////////////////////
+// /* Mongoose Configuration */ //
 mongoose.Promise = Promise; // Set mongoose to leverage Built in JavaScript ES6 Promises
 mongoose.connect("mongodb://m7nj9dclezfq7ax1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", { // Connect to the Mongo DB
   useMongoClient: true
 });
-
-// mongodb://heroku_n498q09l:nqhsgor6hvbhfudh35mk0npfo0@ds147267.mlab.com:47267/heroku_n498q09l
 
 let mongooseConnection = mongoose.connection;
 
@@ -19,10 +17,10 @@ mongooseConnection.once('open', function() {
   console.log(`Sucessfully Connected to Mongo DB !`); // If Connection is successful, Console.log(Message)
 });
 
-/////////////////////////////////////////////// /* Exports */ ////////////////////////////////////////////////////////
 module.exports = (app) => { // Export Module Containing Routes. Called from Server.js
 
-  /////////////////////////////////////////////// /* Get Requests */ ////////////////////////////////////////////////////////
+  // /* Get Requests */ //
+
   // Default Route
   app.get("/", (req, res) => res.render("index"));
 
@@ -76,10 +74,8 @@ module.exports = (app) => { // Export Module Containing Routes. Called from Serv
     });
   }); // Default Route
 
-  /////////////////////////////////////////////// /* Post Requests */ ////////////////////////////////////////////////////////
+  // /* Post Requests */ //
   app.post("/api/add", (req, res) => { // Add Article Route
-
-    // console.log("add path hit");
 
     let articleObject = req.body;
 

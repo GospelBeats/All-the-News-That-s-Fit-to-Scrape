@@ -5,10 +5,10 @@ export default StyleSheet.create({
     color: 'white'
   },
   hover: {
-    backgroundColor: '#F44336'
+    backgroundColor: 'rgb(54, 67, 244)'
   },
   'hoverRed:hover': {
-    color: 'red'
+    color: 'blue'
   },
   'hover:hover': {
     backgroundColor: 'rgba(0,0,0,0.5)'
