@@ -5,7 +5,7 @@ let exphbs = require('express-handlebars'); // Templating Engine
 var db = require("./models"); // Require all models
 
 
-let PORT = process.env.PORT || 8080; // Set Default Port for Express and Heroku
+let PORT = process.env.PORT || 3000; // Set Default Port for Express and Heroku
 let app = express(); // Initialize Express
 
 // /* Configure middleware */ //
