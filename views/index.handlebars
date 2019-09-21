@@ -31,8 +31,8 @@
             <div style="background-color: rgba(0,0,0,0.25); height: 100%; width: 100%; position:absolute; z-index:100;"></div>
             <img src="{{this.imageURL}}">
             <span class="card-title" style="font-size:2.1vh; text-shadow: 1px white; z-index:101;">{{this.headline}}</span>
-            <a class="addArticle btn-floating halfway-fab waves-effect waves-light red modal-trigger" style="z-index:101;" href="#modalMessage" data-headline="{{this.headline}} " data-imageURL="{{this.imageURL}}" data-url="{{this.url}}" data-summary="{{this.summary}}"
-              data-slug="{{this.slug}}"><i class="material-icons">add</i></a>
+            <a class="addArticle btn-floating halfway-fab waves-effect waves-light blue modal-trigger" style="z-index:101;" href="#modalMessage" data-headline="{{this.headline}} " data-imageURL="{{this.imageURL}}" data-url="{{this.url}}" data-summary="{{this.summary}}"
+              data-slug="{{this.slug}}"><i class="material-icons">add_circle_outline</i></a>
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">{{this.slug}}<i class="material-icons right">more_vert</i></span>
@@ -53,7 +53,7 @@
 
 <!-- Message Modal -->
 <div id="modalMessage" class="modal waves-effect waves-green center" style="border:3px black solid height: 100%;">
-  <div class="modal-content pink">
+  <div class="modal-content blue">
     <h4>Article Sucessfully Saved! <i class="fa fa-newspaper-o material-icons" style="height:auto;" aria-hidden="true"></i></h4>
   </div>
 </div>
@@ -90,7 +90,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat hover addComment" style="color:white;">Add</a>
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat hover addComment" style="color:white;">Add_circle_outline</a>
   </div>
 </div>
 
